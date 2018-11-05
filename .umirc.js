@@ -7,7 +7,7 @@ export default {
       antd: true,
       dva: {immer:true},
       dynamicImport: false,
-      title: 'UmiExample',
+      title: 'ToDoReact',
       dll: false,
       routes: {
         exclude: [],

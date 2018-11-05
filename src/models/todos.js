@@ -1,4 +1,5 @@
 import producer from 'immer';
+import uuidv1 from 'uuid/v1';
 
 const defaultTextStyle = {
   fontSize: '1.5rem',
@@ -25,7 +26,7 @@ export default {
     addToDo(state, action){
       return producer(state, (draft)=>{
         draft.count += 1;
-        draft.data.push({id: draft.count, content: draft.temp, done: false, style:defaultTextStyle, display:'block'});
+        draft.data.push({id: uuidv1(), content: draft.temp, done: false, style:defaultTextStyle, display:'block'});
         draft.temp = '';
         return draft;
       })

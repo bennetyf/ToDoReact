@@ -80,7 +80,7 @@ class TodoComponent extends React.Component {
           {this.props.data.map((todo,index) =>(
             <div key={index} style={{display: todo.display}}>
               <div className="d-flex flex-row align-items-center justify-content-between" style={{padding: `0.2rem 2rem`}}>
-                <Checkbox value={todo.done} onChange={()=>this.props.changecheck(todo.id)}> <span style={todo.style}>{todo.content}</span> </Checkbox>
+                <Checkbox value={todo.done} checked={todo.done} onChange={()=>this.props.changecheck(todo.id)}> <span style={todo.style}>{todo.content}</span> </Checkbox>
                 <Button name="delete" type="primary" size="small" onClick={()=>this.props.delete(todo.id)}>Delete</Button>
               </div>
             </div>
